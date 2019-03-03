@@ -22,13 +22,15 @@ modules:
           url: '${default-url}'
     requires:
       - name: openSAPHANA-hdi-container
-
   - name: web
     type: html5
     path: web
-
 resources:
   - name: openSAPHANA-hdi-container
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+  - name: openSAPHANA_00-uaa
+    type: com.sap.xs.uaa-space
+    parameters:
+      path: ./xs-security.json
