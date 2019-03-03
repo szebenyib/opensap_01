@@ -1,0 +1,5 @@
+# Ignore generated files
+
+srv/gen/*
+db/src/gen/*
+.cds_gen.log
