@@ -22,6 +22,16 @@ modules:
                             
 
 
+  
+      - name: cross-container-service-2
+        group: SERVICE_REPLACEMENTS
+
+        properties:
+          key: ServiceName_2
+          service: ~{the-service-name}
+                            
+
+
   - name: srv
     type: nodejs
     path: srv
@@ -50,6 +60,14 @@ resources:
       path: ./xs-security.json
 
   - name: cross-container-service-1
+    parameters:
+       service-name: CROSS_SCHEMA_SFLIGHT_00
+    properties:
+       the-service-name: ${service-name}
+    type: org.cloudfoundry.existing-service
+
+
+  - name: cross-container-service-2
     parameters:
        service-name: CROSS_SCHEMA_SFLIGHT_00
     properties:

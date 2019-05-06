@@ -1,0 +1,26 @@
+VIEW "SFlightExt" (
+	"Client",
+	"CarrierId",
+	"ConnectionId",
+	"FlightDate",
+	"BookingId",
+	"Price",
+	"Currency",
+	"PlaneType",
+	"CustomerId",
+	"CustomerType",
+	"PassengerName" )
+AS SELECT
+	"SFlightView_$0"."Client" ,
+	"SFlightView_$0"."CarrierId" ,
+	"SFlightView_$0"."ConnectionId" ,
+	"SFlightView_$0"."FlightDate" ,
+	"SFlightView_$0"."BookingId" ,
+	"SFlightView_$0"."Price" ,
+	"SFlightView_$0"."Currency" ,
+	"SFlightView_$0"."PlaneType" ,
+	"SFlightView_$0"."CustomerId" ,
+	"SFlightView_$0"."CustomerType" ,
+	"SFlightView_$0"."PassengerName"
+FROM "SFlightView" AS "SFlightView_$0" 
+WITH READ ONLY STRUCTURED PRIVILEGE CHECK
